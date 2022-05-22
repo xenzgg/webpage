@@ -1,7 +1,9 @@
+@charset "UTF-8";
 :root {
   --xenz-purple: #7221ab;
   --xenz-pink: #e31f77;
   --xenz-dark: #182125;
+  --xenz-dark-a25: rgba(24, 33, 37, 0.25);
   --xenz-gradient: linear-gradient(
     to bottom right,
     var(--xenz-purple),
@@ -22,15 +24,13 @@ html {
 }
 
 body {
-  background: var(--xenz-gradient);
+  background-image: var(--xenz-gradient);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-}
-
-body {
-  height: 100vh;
-  width: 100%;
 }
 
 body {
@@ -41,6 +41,20 @@ body {
   margin: 0;
   padding: 0;
   color: var(--text-color);
+}
+
+.mail-link::before {
+  content: "";
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 400;
+  padding-right: 5px;
+}
+
+.phone-link::before {
+  content: "";
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 400;
+  padding-right: 5px;
 }
 
 a {
@@ -61,7 +75,6 @@ nav {
   left: 0;
   width: 97%;
   z-index: 1;
-  backdrop-filter: blur(5px);
   background-color: transparent;
 }
 
@@ -107,73 +120,64 @@ nav a:hover:after {
 /* ------ */
 /* Footer */
 /* ------ */
-@media screen and (min-width: 601px) {
-  footer {
-    color: var(--text-color-alt);
-    background-color: var(--xenz-dark);
-    text-align: center;
-    border-radius: 0;
-    padding: 5 15px;
-    margin: 0;
-  }
-
-  footer {
-    margin-top: auto;
-    width: 100%;
-  }
+footer {
+  color: var(--text-color-alt);
+  background-color: var(--xenz-dark);
+  text-align: center;
+  border-radius: 0;
+  padding: 5 15px;
+  margin: 0;
 }
+
+footer {
+  margin-top: auto;
+  width: 100%;
+}
+
 /* ------- */
-/* Imprint */
+/* container-main */
 /* ------- */
 @media (min-width: 768px) {
-  .imprint {
-    width: 50%;
+  section {
+    width: 65%;
   }
 
-  .imprint {
-    margin-top: 0;
+  .container-main {
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
 }
-@media (min-width: 640px) {
-  .imprint {
-    width: 100%;
-  }
-
-  .imprint {
+@media (min-width: 640px) and (max-width: 767px) {
+  .container-main {
     margin-top: 2.5rem !important;
   }
 }
-@media (max-width: 600px) {
-  .imprint {
+@media (max-width: 639px) {
+  .container-main {
     margin-top: 200px !important;
   }
 }
-.imprint {
-  width: 100%;
-  margin-top: 2.5rem;
-  flex-direction: column;
-  display: flex;
-}
-
-main.imprint > div {
-  margin-bottom: 15px;
+.container-main > div {
+  margin: auto 0;
   backdrop-filter: blur(5px);
-  background-color: var(--xenz-dark);
+  background-color: var(--xenz-dark-a25);
   padding: 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
 }
 
-main.imprint > div > h2 {
+.container-main > div > h2 {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-size: 0.75rem;
   margin-top: 2rem;
 }
 
-main.imprint a {
+.container-main a {
   text-decoration: none;
 }
 
-main.imprint a:hover {
+.container-main a:hover {
   color: var(--text-color);
 }
 
@@ -183,20 +187,43 @@ main.imprint a:hover {
 }
 
 @media (min-width: 768px) {
-  .impr-sect {
+  section {
     padding: 0;
     flex-direction: row;
   }
 }
-@media (min-width: 640px) {
-  .impr-sect {
+@media (max-width: 767px) {
+  section {
     padding: 1.25rem;
   }
 }
-.impr-sect {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  margin: 0;
-  justify-content: center;
+
+/* ------------------ */
+/* Back to Top Button */
+/* ------------------ */
+#btn-btt {
+  display: none;
+  position: fixed;
+  bottom: 24px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: transparent;
+  transition: all 1s ease;
+}
+
+#btn-btt i.fa-circle {
+  color: var(--xenz-purple);
+}
+
+#btn-btt:hover i.fa-circle {
+  color: var(--xenz-pink);
+}
+
+@media (max-width: 1023px) {
+  #btn-btt {
+    visibility: hidden;
+  }
 }
