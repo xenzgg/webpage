@@ -303,6 +303,17 @@ footer {
   background-color: var(--xenz-pink-hover);
 }
 
+.btn-white {
+  background-color: #fff;
+  color: #000;
+}
+
+.btn-white:hover,
+.btn-white:focus,
+.btn-white:active {
+  background-color: #c7c7c7;
+}
+
 /* ------- */
 /* container-main */
 /* ------- */
