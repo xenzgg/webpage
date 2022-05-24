@@ -25,8 +25,6 @@
     <!-- Navigation -->
     <nav>
         <ul>
-            <!-- <li><a target="_blank" href="#">Hallo</a></li>
-            <li><a target="_blank" href="#">ich bins</a></li> -->
             <li><a href="/">Start</a></li>
         </ul>
     </nav>
@@ -34,24 +32,41 @@
     <section class="content-text container-main">
         <div>
             <h1>Bewerbung</h1>
+            <div class="apply-requirements">
+                <h3>Anforderungen</h3>
+                <p style="font-weight:200;">Folgende Voraussetzungen müssen durch jeden Bewerber erfüllt werden
+                    um aufgenommen zu werden:
+                </p>
+                <ul>
+                    <li>Bewerber sollten zum Zeitpunkt der Bewerbung mindestens 16 Jahre alt sein.</li>
+                    <li>Bewerber sollten die deutsche Sprache beherrschen und ein funktionierendes Headset (möglichst
+                        ohne Störgeräusche) besitzen.</li>
+                    <li>Bewerber müssen einen der neusten Call of Duty Teile (beginnend ab Modern Warfare) besitzen.
+                    </li>
+                </ul>
+                <p>Sobald deine Bewerbung bei uns eingegangen ist, wird diese bearbeitet. Gerne kannst du auch vorher
+                    schon auf unserem <a href="#">Teamspeak Server</a> vorbeischauen und dich mit uns und unseren
+                    Mitgliedern vertraut machen. Eine Mitgliedschaft ist niemals eine Voraussetzung um mit uns zu
+                    spielen!</p>
+            </div>
             <form action="#" class="apply-form">
                 <div class="apply-form-absatz">
                     <div class="apply-form-eingabe">
-                        <input type="text" name="vorname" placeholder="Dein Vorname">
+                        <input type="text" name="vorname" placeholder="Dein Vorname*">
                         <i class="fa-solid fa-id-card"></i>
                     </div>
                     <div class="apply-form-eingabe">
-                        <input type="email" name="email" placeholder="Deine E-Mail">
+                        <input type="email" name="email" placeholder="Deine E-Mail*">
                         <i class="fa-solid fa-at"></i>
                     </div>
                 </div>
                 <div class="apply-form-absatz">
                     <div class="apply-form-eingabe">
-                        <input type="text" name="playername" placeholder="Dein Spieler-/Benutzername">
+                        <input type="text" name="playername" placeholder="Dein Spieler-/Benutzername*">
                         <i class="fa-solid fa-gamepad-modern"></i>
                     </div>
                     <div class="apply-form-eingabe">
-                        <input type="text" name="age" placeholder="Dein Alter">
+                        <input type="text" name="age" placeholder="Dein Alter/Geburtsdatum*">
                         <i class="fa-solid fa-calendar-lines"></i>
                     </div>
                 </div>
@@ -60,8 +75,9 @@
                         rows="10"></textarea>
                     <i class="fa-solid fa-file-lines"></i>
                 </div>
+                <p>* = Pflichtangaben</p>
                 <div class="apply-button-area">
-                    <button type="submit">Bewerbung absenden</button>
+                    <button class="btn-white" type="submit">Bewerbung absenden</button>
                     <span></span>
                 </div>
             </form>

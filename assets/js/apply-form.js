@@ -2,9 +2,9 @@ const form = document.querySelector("form.apply-form"),
   statusTxt = form.querySelector(".apply-button-area span");
 form.onsubmit = (e) => {
   e.preventDefault();
-  statusTxt.style.color = "#0D6EFD";
+  statusTxt.style.color = "var(--text-color)";
   statusTxt.style.display = "block";
-  statusTxt.innerText = "Sending your message...";
+  statusTxt.innerText = "Bewerbung wird gesendet...";
   form.classList.add("disabled");
   let xhr = new XMLHttpRequest();
   xhr.open("POST", "message.php", true);
@@ -12,11 +12,11 @@ form.onsubmit = (e) => {
     if (xhr.readyState == 4 && xhr.status == 200) {
       let response = xhr.response;
       if (
-        response.indexOf("required") != -1 ||
-        response.indexOf("valid") != -1 ||
-        response.indexOf("failed") != -1
+        response.indexOf("müssen") != -1 ||
+        response.indexOf("Fehler") != -1 ||
+        response.indexOf("gültige") != -1
       ) {
-        statusTxt.style.color = "red";
+        // statusTxt.style.color = "red";
       } else {
         form.reset();
         setTimeout(() => {

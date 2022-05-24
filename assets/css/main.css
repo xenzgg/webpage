@@ -22,6 +22,7 @@
   --xenz-fonts: Poppins, Arial, Tahoma, sans-serif;
   --text-color: #fff;
   --text-color-alt: #525252;
+  --text-color-placeholder: #ccc;
 }
 
 * {
@@ -420,6 +421,11 @@ form .apply-form-absatz {
   margin-bottom: 25px;
   justify-content: space-between;
 }
+@media screen and (max-width: 767px) {
+  form .apply-form-absatz {
+    flex-direction: column;
+  }
+}
 
 .apply-form-absatz .apply-form-eingabe {
   height: 50px;
@@ -427,12 +433,18 @@ form .apply-form-absatz {
   position: relative;
   width: calc(100% / 2 - 13px);
 }
+@media screen and (max-width: 767px) {
+  .apply-form-absatz .apply-form-eingabe {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
 
 form.apply-form i {
   position: absolute;
   top: 50%;
   left: 18px;
-  color: #ccc;
+  color: var(--text-color-placeholder);
   font-size: 17px;
   pointer-events: none;
   transform: translateY(-50%);
@@ -446,24 +458,24 @@ form.apply-form .apply-form-message textarea {
   padding: 0 18px 0 48px;
   font-size: 16px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--text-color-placeholder);
   font-family: var(--xenz-fonts);
 }
 
 .apply-form-eingabe input::placeholder,
 .apply-form-message textarea::placeholder {
-  color: #ccc;
+  color: var(--text-color-placeholder);
 }
 
 .apply-form-eingabe input:focus,
 .apply-form-message textarea:focus {
   padding-left: 47px;
-  border: 2px solid #0d6efd;
+  border: 2px solid var(--xenz-pink);
 }
 
 .apply-form-eingabe input:focus ~ i,
 .apply-form-message textarea:focus ~ i {
-  color: #0d6efd;
+  color: var(--xenz-pink);
 }
 
 form.apply-form .apply-form-message {
@@ -485,6 +497,11 @@ form.apply-form .apply-form-message textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+@media screen and (max-width: 767px) {
+  form.apply-form .apply-form-message textarea {
+    resize: none;
+  }
+}
 
 form.apply-form .apply-form-message textarea::-webkit-scrollbar {
   width: 0px;
@@ -501,23 +518,24 @@ form.apply-form .apply-button-area {
 }
 
 .apply-button-area button {
-  color: #fff;
   border: none;
   outline: none;
   font-size: 18px;
   cursor: pointer;
   border-radius: 5px;
   padding: 13px 25px;
-  background: #0d6efd;
-  transition: background 0.3s ease;
-}
-
-.apply-button-area button:hover {
-  background: #025ce3;
 }
 
 .apply-button-area span {
   font-size: 17px;
   margin-left: 30px;
   display: none;
+}
+
+div.apply-requirements {
+  margin-bottom: 45px;
+}
+
+.apply-requirements a {
+  text-decoration: underline;
 }
