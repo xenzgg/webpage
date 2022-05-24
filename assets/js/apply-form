@@ -1,5 +1,5 @@
-const form = document.querySelector(".apply-form"),
-  statusTxt = form.querySelector(".button-area span");
+const form = document.querySelector("form.apply-form"),
+  statusTxt = form.querySelector(".apply-button-area span");
 form.onsubmit = (e) => {
   e.preventDefault();
   statusTxt.style.color = "#0D6EFD";
