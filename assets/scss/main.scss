@@ -418,3 +418,110 @@ footer {
     visibility: hidden;
   }
 }
+
+/* ------------------ */
+/* Bewerbungsformular */
+/* ------------------ */
+
+form.apply-form.disabled {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+form .apply-form-absatz {
+  display: flex;
+  margin-bottom: 25px;
+  justify-content: space-between;
+}
+
+.apply-form-absatz .apply-form-eingabe {
+  height: 50px;
+  display: flex;
+  position: relative;
+  width: calc(100% / 2 - 13px);
+}
+
+form.apply-form i {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  color: #ccc;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+form.apply-form .apply-form-eingabe input,
+form.apply-form .apply-form-message textarea {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 18px 0 48px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.apply-form-eingabe input::placeholder,
+.apply-form-message textarea::placeholder {
+  color: #ccc;
+}
+
+.apply-form-eingabe input:focus,
+.apply-form-message textarea:focus {
+  padding-left: 47px;
+  border: 2px solid #0d6efd;
+}
+.apply-form-eingabe input:focus ~ i,
+.apply-form-message textarea:focus ~ i {
+  color: #0d6efd;
+}
+
+form.apply-form .apply-form-message {
+  position: relative;
+}
+form.apply-form .apply-form-message i {
+  top: 30px;
+  font-size: 20px;
+}
+form.apply-form .apply-form-message textarea {
+  min-height: 130px;
+  max-height: 230px;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 15px 20px 0 48px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+form.apply-form .apply-form-message textarea::-webkit-scrollbar {
+  width: 0px;
+}
+.message textarea:focus {
+  padding-top: 14px;
+}
+
+form.apply-form .apply-button-area {
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+}
+.apply-button-area button {
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 13px 25px;
+  background: #0d6efd;
+  transition: background 0.3s ease;
+}
+.apply-button-area button:hover {
+  background: #025ce3;
+}
+.apply-button-area span {
+  font-size: 17px;
+  margin-left: 30px;
+  display: none;
+}
