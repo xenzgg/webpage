@@ -5,7 +5,7 @@
   $phone = htmlspecialchars($_POST['playername']);
   $website = htmlspecialchars($_POST['age']);
   $message = htmlspecialchars($_POST['freitext']);
-  if(!empty($email) && !empty($message)){
+  if(!empty($email) && !empty($age) && !empty($email) && !empty($playername)){
     if(filter_var($email, FILTER_VALIDATE_EMAIL)){
       $receiver = "kontakt@xenz.gg"; //enter that email address where you want to receive all messages
       $subject = "From: $name <$email>";
