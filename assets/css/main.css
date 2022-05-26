@@ -168,6 +168,10 @@ footer {
 }
 
 .content-calltoaction {
+  background-image: url("/assets/images/splatter.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
   background-color: var(--xenz-dark);
   width: 100%;
   text-align: center;
@@ -226,7 +230,7 @@ footer {
 }
 
 .content-team .team-boxen .team-mitglied img {
-  box-shadow: 0 0 0 4px var(--xenz-dark-3), 0 0 0 6px var(--xenz-pink);
+  box-shadow: 0 0 0 4px var(--xenz-dark-3), 0 0 0 6px var(--xenz-pink), 0 0 0 10px var(--xenz-dark-3);
 }
 
 .content-team .team-boxen .team-mitglied img:hover {
@@ -285,7 +289,7 @@ footer {
 }
 
 .btn-large {
-  padding: 15px 20px;
+  padding: 15px 60px;
   font-size: 1.2rem;
 }
 
@@ -294,8 +298,8 @@ footer {
   color: var(--text-color);
 }
 
-.btn-primary.glow {
-  box-shadow: 0 0 3px 1px var(--xenz-pink);
+.btn-primary.btn-glow {
+  box-shadow: 0 0 15px 1px var(--xenz-pink);
 }
 
 .btn-primary:hover,
@@ -313,6 +317,14 @@ footer {
 .btn-white:focus,
 .btn-white:active {
   background-color: #c7c7c7;
+}
+
+.btn-anim {
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-anim:hover {
+  transform: scale(1.12);
 }
 
 /* ------- */
