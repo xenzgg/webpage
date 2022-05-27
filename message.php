@@ -8,7 +8,7 @@
     if(filter_var($email, FILTER_VALIDATE_EMAIL)){
       $receiver = "bewerbung@xenz.gg";
       $subject = "Bewerbung $name [$playername]";
-      $body = "Name: $name\nE-Mail: $email\nGamertag: $playername\nAlter: $age\n\nnachricht:\n$message";
+      $body = "Name: $name\nE-Mail: $email\nGamertag: $playername\nAlter: $age\n\nNachricht:\n$message";
       $sender = "From: $email";
       if(mail($receiver, $subject, $body, $sender)){
          echo "Deine Bewerbung wurde erfolgreich versendet!";
